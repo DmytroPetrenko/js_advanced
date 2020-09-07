@@ -1,0 +1,29 @@
+#output {
+  position: fixed;
+  background-color: yellowgreen;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  bottom: 30px;
+  right: 30px;
+  opacity: 0;
+  /* visibility: hidden; */
+  animation: visible 3s;
+  animation-iteration-count: 0;
+}
+
+@keyframes visible {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    85% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
