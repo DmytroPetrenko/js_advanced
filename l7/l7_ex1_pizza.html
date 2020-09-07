@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>l7_ex1_pizza</title>
+    <!-- CSS only -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="l7_ex1_pizza.css" />
+    <script src="l7_ex1_pizza.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-4 header-text"><h1>Собери пицу на свой вкус</h1></div>
+          <div class="col-8">
+            <img class="img-fluid" src="img/pizza.jpg" alt="PizzaImage" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <form action="">
+        <div class="container">
+          <div class="row">
+            <div class="col-4">
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">Размер пиццы</label>
+              </div>
+            </div>
+            <div class="col-4">
+              <label for="exampleFormControlSelect1"
+                >Дополнительные ингридиенты</label
+              >
+            </div>
+            <div class="col-4">
+              <label for="exampleFormControlSelect1"
+                >Информация о покупателе</label
+              >
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <div class="form-group">
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>Большая</option>
+                  <option>Средняя</option>
+                  <option>Маленькая</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="form-row">
+                <div class="form-check pr5">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="defaultCheck1"
+                  />
+                  <label class="form-check-label" for="defaultCheck1">
+                    Грибы
+                  </label>
+                </div>
+                <div class="form-check pr5">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="defaultCheck1"
+                  />
+                  <label class="form-check-label" for="defaultCheck1">
+                    Бекон
+                  </label>
+                </div>
+                <div class="form-check pr5">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="defaultCheck1"
+                  />
+                  <label class="form-check-label" for="defaultCheck1">
+                    Помидоры
+                  </label>
+                </div>
+                <div class="form-check pr5">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="defaultCheck1"
+                  />
+                  <label class="form-check-label" for="defaultCheck1">
+                    Сыр
+                  </label>
+                </div>
+                <div class="form-check pr5">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="defaultCheck1"
+                  />
+                  <label class="form-check-label" for="defaultCheck1">
+                    Оливки
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="form-row">
+                <div class="col-xl-6 my-1">
+                  <label for="exampleFormControlInput1">Телефон</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="380635365566"
+                  />
+                </div>
+                <div class="col-xl-6 my-1">
+                  <label for="exampleFormControlInput1">Адрес доставки</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="Сверстюка 19, кв.134"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-center">
+              <button type="submit" class="btn btn-primary">Заказать</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

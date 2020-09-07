@@ -1,0 +1,27 @@
+header {
+    background-color: #cae3ee;
+}
+
+main {
+    background-color: #cdfed8;
+}
+
+.container {
+    padding: 50px 0;
+}
+
+h1 {
+    line-height: 1.3em;
+    text-transform: uppercase;
+    margin: auto;
+    font-size: 3em;
+}
+
+.header-text {
+    display: flex;
+
+}
+
+.pr5 {
+    padding-right: 5px;
+}
