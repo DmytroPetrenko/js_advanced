@@ -25,3 +25,7 @@ h1 {
 .pr5 {
     padding-right: 5px;
 }
+
+li {
+    list-style: none;
+}

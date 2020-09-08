@@ -35,7 +35,7 @@
               </div>
             </div>
             <div class="col-4">
-              <label for="additional-ingridients-1"
+              <label for="additional-ingridients"
                 >Дополнительные ингридиенты</label
               >
             </div>
@@ -56,7 +56,7 @@
               </div>
             </div>
             <div class="col-4">
-              <div class="form-row">
+              <div id="additional-ingridients-block" class="form-row">
                 <div class="form-check pr5">
                   <input
                     class="form-check-input"
@@ -121,7 +121,7 @@
                   <input
                     type="tel"
                     class="form-control"
-                    id="PhoneInput"
+                    id="phoneInput"
                     placeholder="380635365566"
                   />
                 </div>
@@ -130,7 +130,7 @@
                   <input
                     type="text"
                     class="form-control"
-                    id="AdressInput"
+                    id="addressInput"
                     placeholder="Сверстюка 19, кв.134"
                   />
                 </div>
@@ -149,7 +149,7 @@
         </div>
       </form>
 
-      <div class="container fixed-top">
+      <div id="orderCard" class="container fixed-top invisible">
         <div class="row">
           <div class="col-2"></div>
           <div class="col-8">
@@ -161,7 +161,7 @@
                       <h4 class="card-title">Ваш заказ успешно сформирован!</h4>
                     </div>
                     <div class="col-1 p-0 m-0">
-                      <button type="button" class="close" aria-label="Close">
+                      <button type="button" id="closeOrderCard" class="close" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
@@ -179,8 +179,8 @@
                   </div>
                   <div class="row">
                     <div class="col-6">Дополнительные ингридиенты:</div>
-                    <div id="additional-ingridients-answer" class="col-6">
-                      Грибы
+                    <div id="additional-ingridients-answer" class="col-6 d-flex flex-wrap">
+                      
                     </div>
                   </div>
                   <div class="row">
@@ -189,11 +189,11 @@
                   </div>
                   <div class="row">
                     <div class="col-6">Телефон для связи:</div>
-                    <div id="phone-answer" class="col-6">0635368686</div>
+                    <div id="phone-answer" class="col-6"></div>
                   </div>
                   <div class="row">
                     <div class="col-6">Адрес доставки:</div>
-                    <div id="address-answer" class="col-6">Сверстюка 19</div>
+                    <div id="address-answer" class="col-6"></div>
                   </div>
                 </div>
               </div>
