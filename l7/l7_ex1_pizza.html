@@ -26,21 +26,21 @@
       </div>
     </header>
     <main>
-      <form action="">
+      <form id="pizzaForm" action="">
         <div class="container">
           <div class="row">
             <div class="col-4">
               <div class="form-group">
-                <label for="exampleFormControlSelect1">Размер пиццы</label>
+                <label for="selectPizzaSize">Размер пиццы</label>
               </div>
             </div>
             <div class="col-4">
-              <label for="exampleFormControlSelect1"
+              <label for="additional-ingridients-1"
                 >Дополнительные ингридиенты</label
               >
             </div>
             <div class="col-4">
-              <label for="exampleFormControlSelect1"
+              <label for="personalInfo"
                 >Информация о покупателе</label
               >
             </div>
@@ -48,7 +48,7 @@
           <div class="row">
             <div class="col-4">
               <div class="form-group">
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="form-control" id="selectPizzaSize">
                   <option>Большая</option>
                   <option>Средняя</option>
                   <option>Маленькая</option>
@@ -62,9 +62,9 @@
                     class="form-check-input"
                     type="checkbox"
                     value=""
-                    id="defaultCheck1"
+                    id="additional-ingridients-1"
                   />
-                  <label class="form-check-label" for="defaultCheck1">
+                  <label class="form-check-label" for="additional-ingridients-1">
                     Грибы
                   </label>
                 </div>
@@ -73,9 +73,9 @@
                     class="form-check-input"
                     type="checkbox"
                     value=""
-                    id="defaultCheck1"
+                    id="additional-ingridients-2"
                   />
-                  <label class="form-check-label" for="defaultCheck1">
+                  <label class="form-check-label" for="additional-ingridients-2">
                     Бекон
                   </label>
                 </div>
@@ -84,9 +84,9 @@
                     class="form-check-input"
                     type="checkbox"
                     value=""
-                    id="defaultCheck1"
+                    id="additional-ingridients-3"
                   />
-                  <label class="form-check-label" for="defaultCheck1">
+                  <label class="form-check-label" for="additional-ingridients-3">
                     Помидоры
                   </label>
                 </div>
@@ -95,9 +95,9 @@
                     class="form-check-input"
                     type="checkbox"
                     value=""
-                    id="defaultCheck1"
+                    id="additional-ingridients-4"
                   />
-                  <label class="form-check-label" for="defaultCheck1">
+                  <label class="form-check-label" for="additional-ingridients-4">
                     Сыр
                   </label>
                 </div>
@@ -106,9 +106,9 @@
                     class="form-check-input"
                     type="checkbox"
                     value=""
-                    id="defaultCheck1"
+                    id="additional-ingridients-5"
                   />
-                  <label class="form-check-label" for="defaultCheck1">
+                  <label class="form-check-label" for="additional-ingridients-5">
                     Оливки
                   </label>
                 </div>
@@ -117,20 +117,20 @@
             <div class="col-4">
               <div class="form-row">
                 <div class="col-xl-6 my-1">
-                  <label for="exampleFormControlInput1">Телефон</label>
+                  <label for="PhoneInput">Телефон</label>
                   <input
                     type="tel"
                     class="form-control"
-                    id="exampleFormControlInput1"
+                    id="PhoneInput"
                     placeholder="380635365566"
                   />
                 </div>
                 <div class="col-xl-6 my-1">
-                  <label for="exampleFormControlInput1">Адрес доставки</label>
+                  <label for="AdressInput">Адрес доставки</label>
                   <input
                     type="text"
                     class="form-control"
-                    id="exampleFormControlInput1"
+                    id="AdressInput"
                     placeholder="Сверстюка 19, кв.134"
                   />
                 </div>
@@ -138,12 +138,70 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-12 text-center">
-              <button type="submit" class="btn btn-primary">Заказать</button>
+            <div class="col-4"></div>
+            <div class="col-4 text-center pt-4">
+              <button id="orderBtn" type="submit" class="btn btn-primary btn-block btn-lg">
+                Заказать
+              </button>
             </div>
+            <div class="col-4"></div>
           </div>
         </div>
       </form>
+
+      <div class="container fixed-top">
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-8">
+            <div class="card border-success">
+              <div class="card-body">
+                <div class="container p-0 m-0">
+                  <div class="row p-0 m-0">
+                    <div class="col-11 p-0 m-0">
+                      <h4 class="card-title">Ваш заказ успешно сформирован!</h4>
+                    </div>
+                    <div class="col-1 p-0 m-0">
+                      <button type="button" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="container">
+                  <div class="row">
+                    <div class="col-6">Название:</div>
+                    <div class="col-6">Индивидуальная</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">Размер:</div>
+                    <div id="size-answer" class="col-6"></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">Дополнительные ингридиенты:</div>
+                    <div id="additional-ingridients-answer" class="col-6">
+                      Грибы
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">&nbsp;</div>
+                    <div class="col-6"></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">Телефон для связи:</div>
+                    <div id="phone-answer" class="col-6">0635368686</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">Адрес доставки:</div>
+                    <div id="address-answer" class="col-6">Сверстюка 19</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-2"></div>
+        </div>
+      </div>
     </main>
   </body>
 </html>
