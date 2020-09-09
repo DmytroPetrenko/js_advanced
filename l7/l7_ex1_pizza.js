@@ -2,21 +2,39 @@ window.addEventListener("load", init, false);
 
 function init() {
   var pizzaForm = document.getElementById("pizzaForm");
-  var closeOrderCard = document.getElementById("closeOrderCard");
+  var flag = true;
 
-  pizzaForm.addEventListener("submit", initOrder, false);
-  pizzaForm.addEventListener("submit", getOrderCard, false);
-  closeOrderCard.addEventListener("click", hideOrderCard, false);
+  pizzaForm.addEventListener(
+    "submit",
+    function (event) {
+      if (pizzaForm.checkValidity() === false) {
+        flag = false;
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      pizzaForm.classList.add("was-validated");
+      event.preventDefault();
+    },
+    false
+  );
+
+  if (flag === true) {
+    var closeOrderCard = document.getElementById("closeOrderCard");
+
+    pizzaForm.addEventListener("submit", initOrder, false);
+    pizzaForm.addEventListener("submit", getOrderCard, false);
+    closeOrderCard.addEventListener("click", hideOrderCard, false);
+  }
 }
 
 function hideOrderCard() {
-    orderCard = document.getElementById("orderCard");
-    orderCard.className = "container fixed-top invisible";
+  orderCard = document.getElementById("orderCard");
+  orderCard.className = "container fixed-top invisible";
 }
 
 function getOrderCard() {
-    orderCard = document.getElementById("orderCard");
-    orderCard.className = "container fixed-top visible";
+  orderCard = document.getElementById("orderCard");
+  orderCard.className = "container fixed-top visible";
 }
 
 function initOrder(e) {
@@ -34,12 +52,12 @@ function initOrder(e) {
       inputs.push(element);
     }
     if (element.id == "phoneInput") {
-        var phoneNumber = element.value;
-        document.getElementById("phone-answer").innerHTML = phoneNumber;
+      var phoneNumber = element.value;
+      document.getElementById("phone-answer").innerHTML = phoneNumber;
     }
     if (element.id == "addressInput") {
-        var address = element.value;
-        document.getElementById("address-answer").innerHTML = address;
+      var address = element.value;
+      document.getElementById("address-answer").innerHTML = address;
     }
   }
 
@@ -61,4 +79,3 @@ function initOrder(e) {
 
   e.preventDefault();
 }
-
