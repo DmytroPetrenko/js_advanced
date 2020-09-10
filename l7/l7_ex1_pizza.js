@@ -1,7 +1,38 @@
 window.addEventListener("load", init, false);
+window.addEventListener("load", priceInit, false);
+
+function getPizzaForm() {
+  return document.getElementById("pizzaForm");
+}
+
+function priceInit() {
+  var basicPrice = document.getElementById("basicPrice");
+  var price = document.getElementById("price");
+  var pizza = getPizza();  
+
+  if (pizza.pizzaSize === "Большая") {
+    basicPrice.innerText = "200 грн";
+  } else if (pizza.pizzaSize === "Средняя") {
+    basicPrice.innerText = "150 грн";
+  } else if (pizza.pizzaSize === "Маленькая") {
+    basicPrice.innerText = "100 грн";
+  }
+}
+
+function getPizza() {
+  pizzaForm = getPizzaForm();
+  var pizza = new Object();
+  for (let i = 0; i < pizzaForm.elements.length; i++) {
+    const element = pizzaForm.elements[i];
+    if (element.id == "selectPizzaSize") {
+      pizza.pizzaSize = element.value;
+    }
+  }
+  return pizza;
+}
 
 function init() {
-  var pizzaForm = document.getElementById("pizzaForm");
+  var pizzaForm = getPizzaForm();
   var flag = true;
 
   pizzaForm.addEventListener(
@@ -24,6 +55,7 @@ function init() {
     pizzaForm.addEventListener("submit", initOrder, false);
     pizzaForm.addEventListener("submit", getOrderCard, false);
     closeOrderCard.addEventListener("click", hideOrderCard, false);
+    getPizzaForm().addEventListener("change", priceInit, false);
   }
 }
 
@@ -45,7 +77,6 @@ function initOrder(e) {
     const element = formElements[i];
     if (element.id == "selectPizzaSize") {
       var pizzaSize = element.value;
-
       document.getElementById("size-answer").innerHTML = pizzaSize;
     }
     if (element.id.match("additional-ingridients")) {
