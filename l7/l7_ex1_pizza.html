@@ -54,7 +54,7 @@
                 </select>
               </div>
               <div>Цена за основу: <p id="basicPrice"></p></div>
-              <div id="price">Общая стоимость: </div>
+              <div>Общая стоимость: <p id="price"></p></div>
             </div>
             <div class="col-4">
               <div id="additional-ingridients-block" class="form-row">
@@ -195,6 +195,7 @@
                         id="closeOrderCard"
                         class="close"
                         aria-label="Close"
+                        onclick="setOrderCardVisible(false)"
                       >
                         <span aria-hidden="true">&times;</span>
                       </button>
@@ -229,6 +230,10 @@
                   <div class="row">
                     <div class="col-6">Адрес доставки:</div>
                     <div id="address-answer" class="col-6"></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">Общая стоимость:</div>
+                    <div id="price-answer" class="col-6"></div>
                   </div>
                 </div>
               </div>
